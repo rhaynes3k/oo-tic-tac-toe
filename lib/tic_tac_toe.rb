@@ -82,6 +82,7 @@ class TicTacToe
     if @board.each{|pos|!pos == " "}
       false
     end
+    #x_arr = @board.index("X")
     
   end
   
