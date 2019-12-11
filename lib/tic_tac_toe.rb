@@ -98,7 +98,7 @@ class TicTacToe
   
   def winner
     if self.won?
-      @board.rindex("O")
+      @board.rindex("X")
       "X"
     else
       "O"
