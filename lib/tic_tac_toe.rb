@@ -99,7 +99,7 @@ class TicTacToe
   def winner
       x = self.won?
      ans= x.map{|w|@board[w]}
-     ans
+     ans[0]
      
       
 # binding.pry
