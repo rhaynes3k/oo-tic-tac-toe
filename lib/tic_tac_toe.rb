@@ -101,9 +101,9 @@ class TicTacToe
       ans = x.map{|w|@board[w]}
       ans[0]
     else
-      return nil
+      return
     end 
-  end
+ 
       
 # binding.pry
   end
