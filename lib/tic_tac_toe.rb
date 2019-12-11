@@ -97,10 +97,11 @@ class TicTacToe
   end
   
   def winner
-    x = self.won?
+    if x = self.won?
     ans = x.map{|w|@board[w]}
     ans[0]
-    
+  else
+    return
     
  end
       
