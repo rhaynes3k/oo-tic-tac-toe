@@ -103,7 +103,7 @@ class TicTacToe
     else
       "O"
     end
-binding.pry
+#binding.pry
       
   end
 end
