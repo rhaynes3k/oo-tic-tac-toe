@@ -97,7 +97,7 @@ class TicTacToe
   end
   
   def winner
-    self.won?
+    
       @board.value_at("X")
    
 #binding.pry
