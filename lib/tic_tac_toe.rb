@@ -97,8 +97,7 @@ class TicTacToe
   end
   
   def winner
-    
-      @board.values_at(self.won?.each{|w|w})
+      self.won?.each{|w|@board.values_at(w)}
    
 #binding.pry
       
