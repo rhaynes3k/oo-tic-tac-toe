@@ -98,7 +98,7 @@ class TicTacToe
   
   def winner
       x = self.won?
-      @board.rindex(@board[x[0]])
+      @board
  binding.pry
   end
   
