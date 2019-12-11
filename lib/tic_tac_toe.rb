@@ -31,9 +31,9 @@ class TicTacToe
     #@pic = pic
   end
   
-  def move(pic, token)
-    @board[0] = "X"
-    @board[4] = "O"
+  def move(pic, token = "X")
+    @board[pic] = token
+    
   end
   
   def position_taken?(pic)
@@ -66,26 +66,44 @@ class TicTacToe
     str = gets
     
       p1 = input_to_index(str)
-    if valid_move?(p1) == true
-      @board[p1] = current_player
+    if valid_move?(p1)
+      move(p1, current_player)
+        #@board[p1] = current_player
       display_board
       
     else
       puts "invalid"
       # puts "Please choose your move by choosing 1-9."
-      str = gets
+      turn
     end
     #turn
   end
   
   def won?
-    if @board.each{|pos|!pos == " "}
-      false
-    end
-    #x_arr = @board.index("X")
-    
+   WIN_COMBINATIONS.find{|w|@board[w[0]] == @board[w[1]] && @board[w[1]]  == @board[w[2]]}
   end
   
+  def full?
+    @board.all?{|pos|pos == "X" || pos ==  "O"}
+    #binding.pry
+  end
+  
+  def draw?
+    self.full? == true && self.won? == nil
+  end
+  
+  def over?
+    self.draw? == true || self.won?
+  end
+  
+  def winner
+    if self.won?
+      @board.rindex("X")
+      "X"
+    else
+      "O"
+    end
 
-  #binding.pry
+      
+  end
 end
