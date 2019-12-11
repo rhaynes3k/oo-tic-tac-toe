@@ -98,7 +98,8 @@ class TicTacToe
   
   def winner
       x = self.won?
- binding.pry
+      x.select{|w|w}
+ #binding.pry
   end
   
 end
