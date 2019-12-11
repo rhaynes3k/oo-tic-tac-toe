@@ -98,7 +98,7 @@ class TicTacToe
   
   def winner
       x = self.won?
-      x.map{|w|@board[w]}
+      x.map{|w|@board[w].uniq}
       
 # binding.pry
   end
