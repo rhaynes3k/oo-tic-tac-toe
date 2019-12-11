@@ -98,7 +98,8 @@ class TicTacToe
   
   def winner
       x = self.won?
-      x.map{|w|@board[w]}
+     ans= x.map{|w|@board[w]}
+     ans.pop
       
 # binding.pry
   end
