@@ -98,7 +98,7 @@ class TicTacToe
   
   def winner
     self.won?
-      @board.rindex("X") ? "X" : "O"
+      @board.value_at("X")
    
 #binding.pry
       
