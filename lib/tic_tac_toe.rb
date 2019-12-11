@@ -102,7 +102,7 @@ class TicTacToe
     ans[0]
   else
     return
-    
+   end 
  end
       
 # binding.pry
