@@ -101,7 +101,7 @@ class TicTacToe
         ans= x.map{|w|@board[w]}
         ans[0]
     else
-      nil
+      "nil"
     
  end
       
